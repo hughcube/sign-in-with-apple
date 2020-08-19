@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hugh.li
  * Date: 2020/8/17
- * Time: 18:45
+ * Time: 18:45.
  */
 
 namespace HughCube\SignInWithApple\Entity;
@@ -39,6 +39,7 @@ class AuthTokenResponse
 
     /**
      * AuthTokenResponse constructor.
+     *
      * @param string $jsonString
      */
     public function __construct($jsonString)
