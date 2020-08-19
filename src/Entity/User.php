@@ -8,7 +8,6 @@
 
 namespace HughCube\SignInWithApple\Entity;
 
-
 class User
 {
     public $iss;
@@ -33,17 +32,17 @@ class User
 
     /**
      * User constructor.
-     * @param $claims
+     * @param array $claims
      */
-    public function __construct($claims)
+    public function __construct(array $claims)
     {
         $this->fillProperties($claims);
     }
 
     /**
-     * @param $claims
+     * @param array $claims
      */
-    protected function fillProperties($claims)
+    protected function fillProperties(array $claims)
     {
         foreach ($claims as $name => $value) {
             if (property_exists($this, $name)) {

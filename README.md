@@ -8,8 +8,8 @@
     <a href="https://github.com/hughcube/sign-in-with-apple/actions?query=workflow%3ALint">
         <img src="https://github.com/hughcube/sign-in-with-apple/workflows/Lint/badge.svg" alt="Lint Actions status">
     </a>
-    <a href="https://styleci.io/repos/217659566">
-        <img src="https://github.styleci.io/repos/217659566/shield?branch=master" alt="StyleCI">
+    <a href="https://styleci.io/repos/288140356">
+        <img src="https://github.styleci.io/repos/288140356/shield?branch=master" alt="StyleCI">
     </a>
     <a href="https://scrutinizer-ci.com/g/hughcube/sign-in-with-apple/?branch=master">
         <img src="https://scrutinizer-ci.com/g/hughcube/sign-in-with-apple/badges/coverage.png?b=master" alt="Code Coverage">

@@ -1,6 +1,6 @@
 {
     "name": "hughcube/sign-in-with-apple",
-    "description": "url",
+    "description": "sign in with apple",
     "license": "MIT",
     "authors": [
         {
@@ -10,6 +10,7 @@
     ],
     "require": {
         "php": ">=7.0",
+        "ext-json": "*",
         "lcobucci/jwt": "^3.3",
         "guzzlehttp/guzzle": "^6.0"
     },

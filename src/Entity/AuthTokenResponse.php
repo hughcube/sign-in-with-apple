@@ -8,7 +8,6 @@
 
 namespace HughCube\SignInWithApple\Entity;
 
-
 use InvalidArgumentException;
 
 class AuthTokenResponse
@@ -40,7 +39,7 @@ class AuthTokenResponse
 
     /**
      * AuthTokenResponse constructor.
-     * @param $jsonString
+     * @param string $jsonString
      */
     public function __construct($jsonString)
     {
@@ -48,7 +47,7 @@ class AuthTokenResponse
     }
 
     /**
-     * @param $jsonString
+     * @param string $jsonString
      */
     protected function fillProperties($jsonString)
     {
