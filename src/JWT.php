@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hugh.li
  * Date: 2020/8/17
- * Time: 17:59
+ * Time: 17:59.
  */
 
 namespace HughCube\SignInWithApple;
@@ -28,8 +28,9 @@ class JWT
 
     /**
      * JWT constructor.
+     *
      * @param Client $client
-     * @param int $exp
+     * @param int    $exp
      */
     public function __construct(Client $client, $exp = 3600)
     {
@@ -38,7 +39,7 @@ class JWT
     }
 
     /**
-     * 获取key
+     * 获取key.
      *
      * @return Key
      */
@@ -60,9 +61,9 @@ class JWT
         return new Sha256();
     }
 
-
     /**
      * @param int $exp
+     *
      * @return Token
      */
     public function createToken($exp = 3600)

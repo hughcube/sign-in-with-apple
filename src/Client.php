@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hugh.li
  * Date: 2020/8/17
- * Time: 17:51
+ * Time: 17:51.
  */
 
 namespace HughCube\SignInWithApple;
@@ -12,7 +12,6 @@ use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\ClientInterface as HttpClientInterface;
 use GuzzleHttp\RequestOptions as HttpRequestOptions;
 use HughCube\SignInWithApple\Entity\AuthTokenResponse;
-use HughCube\SignInWithApple\Entity\IdToken;
 
 class Client
 {
@@ -147,11 +146,11 @@ class Client
             'POST',
             '/auth/token',
             [
-                'client_id' => $this->clientId,
+                'client_id'     => $this->clientId,
                 'client_secret' => $this->getClientSecret(),
-                'code' => $code,
-                'grant_type' => 'authorization_code',
-                'redirect_uri' => null
+                'code'          => $code,
+                'grant_type'    => 'authorization_code',
+                'redirect_uri'  => null,
             ]
         );
 
@@ -161,10 +160,12 @@ class Client
     /**
      * @param string $method
      * @param string $uri
-     * @param array $body
-     * @param array $options
-     * @return string
+     * @param array  $body
+     * @param array  $options
+     *
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return string
      */
     protected function httpRequest($method, $uri, array $body = [], array $options = [])
     {
@@ -184,8 +185,8 @@ class Client
         if (!$this->httpClient instanceof HttpClientInterface) {
             $this->httpClient = new HttpClient(
                 [
-                    'base_uri' => $this->httpBaseUrl,
-                    HttpRequestOptions::TIMEOUT => $this->httpTimeout,
+                    'base_uri'                          => $this->httpBaseUrl,
+                    HttpRequestOptions::TIMEOUT         => $this->httpTimeout,
                     HttpRequestOptions::CONNECT_TIMEOUT => $this->httpConnectTimeout,
                 ]
             );

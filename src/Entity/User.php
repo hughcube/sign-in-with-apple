@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: hugh.li
  * Date: 2020/8/17
- * Time: 18:44
+ * Time: 18:44.
  */
 
 namespace HughCube\SignInWithApple\Entity;
@@ -32,6 +32,7 @@ class User
 
     /**
      * User constructor.
+     *
      * @param array $claims
      */
     public function __construct(array $claims)
