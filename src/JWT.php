@@ -11,8 +11,8 @@ namespace HughCube\SignInWithApple;
 
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer;
+use Lcobucci\JWT\Signer\Ecdsa\Sha256;
 use Lcobucci\JWT\Signer\Key;
-use Lcobucci\JWT\Signer\Rsa\Sha256;
 use Lcobucci\JWT\Token;
 
 class JWT
@@ -34,6 +34,7 @@ class JWT
     public function __construct($client, $exp = 3600)
     {
         $this->client = $client;
+        $this->token = $this->createToken($exp);
     }
 
     /**
@@ -60,7 +61,6 @@ class JWT
     }
 
 
-
     /**
      * @param int $expires
      * @return Token
@@ -83,10 +83,18 @@ class JWT
     }
 
     /**
+     * @return Token
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
      * @return string
      */
     public function toString()
     {
-        return strval($this);
+        return strval($this->getToken());
     }
 }
